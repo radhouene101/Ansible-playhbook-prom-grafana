@@ -1,0 +1,9 @@
+#!/bin/bash
+
+#helm repo add prometheus-community https://prometheus-community.github.io/helm-charts
+
+helm install autoprometheus prometheus-community/kube-prometheus-stack --namespace monitoring-ansible
+
+#kubectl --namespace monitoring-ansible patch svc auto_prometheus-kube-prometheus-prometheus -p '{"spec": {"type": "NodePort"}}'
+
+#kubectl --namespace monitoring-ansible patch svc auto_prometheus-grafana -p '{"spec": {"type": "NodePort"}}'

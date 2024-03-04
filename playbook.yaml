@@ -1,0 +1,9 @@
+---
+- name: Exécuter un script Bash avec Ansible
+  hosts: localhost
+#  become: yes
+  tasks:
+
+    - name: Exécuter le script Bash
+      shell: /home/oussema/ansible-prometheus-grafana/deploy_monitoring
+
